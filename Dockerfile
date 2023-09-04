@@ -19,6 +19,8 @@ COPY . /app
 # We set the working directory for commands from this point on
 WORKDIR /app
 
+# Create a folder in volume
+VOLUME /app/uploads
 # We run `pipenv install` to install our project's dependencies. Since we've
 # copied in our `Pipfile`, `pipenv` will use that to get a list of dependencies.
 # We include a couple of extra options suitable for deployment.
