@@ -3,7 +3,10 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-upload_folder = "uploads"
+# upload_folder = "uploads"
+# app.config['upload_folder'] = upload_folder
+
+upload_folder = os.path.join(os.getcwd(), 'uploads')
 app.config['upload_folder'] = upload_folder
 
 @app.route('/upload', methods=['GET'])
